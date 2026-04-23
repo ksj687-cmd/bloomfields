@@ -839,7 +839,7 @@ function OrderRow({ time, title, type, status, onClick }) {
   return (
     <div 
       onClick={onClick}
-      className={\`flex items-center justify-between p-3 rounded-xl transition-all cursor-pointer \${isPending ? 'hover:bg-slate-50 active:bg-slate-100' : ''}\`}
+      className={`flex items-center justify-between p-3 rounded-xl transition-all cursor-pointer ${isPending ? 'hover:bg-slate-50 active:bg-slate-100' : ''}`}
     >
       <div className="flex items-center gap-3">
         <div className="flex flex-col items-center justify-center bg-slate-50 border border-slate-100 w-12 h-12 rounded-xl text-center">
@@ -853,7 +853,7 @@ function OrderRow({ time, title, type, status, onClick }) {
           <p className="text-[10px] text-slate-500 font-medium">{type}</p>
         </div>
       </div>
-      <div className={\`px-3 py-1 rounded-full text-[10px] font-bold transition-colors \${isPending ? 'bg-amber-100 text-amber-700 ring-1 ring-amber-200' : 'bg-emerald-100 text-emerald-700'}\`}>
+      <div className={`px-3 py-1 rounded-full text-[10px] font-bold transition-colors ${isPending ? 'bg-amber-100 text-amber-700 ring-1 ring-amber-200' : 'bg-emerald-100 text-emerald-700'}`}>
         {status}
       </div>
     </div>
@@ -874,7 +874,7 @@ function DetailedOrderCard({ orderNo, customer, items, time, status, isCombined 
           <span className="text-xs font-bold text-slate-900">{orderNo}</span>
           <span className="text-[10px] text-slate-500">{customer}</span>
         </div>
-        <span className={\`text-[10px] font-bold px-2 py-1 rounded-md border \${statusColors[status]}\`}>
+        <span className={`text-[10px] font-bold px-2 py-1 rounded-md border ${statusColors[status]}`}>
           {status}
         </span>
       </div>
@@ -928,7 +928,7 @@ function InventoryItem({ name, sku, price, stock, isActive }) {
           <span className="text-xs font-bold text-slate-500 mr-3">현재 재고</span>
           <div className="flex items-center bg-slate-50 rounded-lg border border-slate-200">
             <button className="p-1 text-slate-400 hover:text-slate-700"><Minus size={14}/></button>
-            <span className={\`w-8 text-center text-sm font-bold \${isOutOfStock ? 'text-rose-500' : 'text-slate-900'}\`}>{stock}</span>
+            <span className={`w-8 text-center text-sm font-bold ${isOutOfStock ? 'text-rose-500' : 'text-slate-900'}`}>{stock}</span>
             <button className="p-1 text-slate-400 hover:text-slate-700"><Plus size={14}/></button>
           </div>
         </div>
@@ -946,7 +946,7 @@ function PartnerInventoryItem({ partner, name, stock, warning }) {
         <span className="text-[10px] font-bold text-indigo-500 mb-1 block">{partner}</span>
         <h4 className="text-sm font-bold text-slate-800">{name}</h4>
       </div>
-      <div className={\`text-xs font-bold px-3 py-1.5 rounded-lg \${warning ? 'bg-amber-100 text-amber-700' : 'bg-emerald-100 text-emerald-700'}\`}>
+      <div className={`text-xs font-bold px-3 py-1.5 rounded-lg ${warning ? 'bg-amber-100 text-amber-700' : 'bg-emerald-100 text-emerald-700'}`}>
         {stock}
       </div>
     </div>
