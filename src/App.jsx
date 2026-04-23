@@ -5,6 +5,8 @@ import {
   Loader2, CheckCircle2, X, Sparkles, Truck, Check,
   Filter, AlertCircle, Plus, Minus, ToggleRight, ToggleLeft, RefreshCw, Wand2
 } from 'lucide-react';
+import premiumBouquetImg from './assets/premium_bouquet.png';
+import orchidFruitImg from './assets/orchid_fruit_basket.png';
 
 // Pretendard 폰트 및 커스텀 스크롤바 숨김 스타일
 const globalStyles = `
@@ -751,7 +753,7 @@ function B2CHome({ onOpenAi }) {
             price="125,000"
             rating="4.9"
             tags={['#연인', '#성공적']}
-            imageUrl="https://images.unsplash.com/photo-1591886960571-74d112e4f0dc?auto=format&fit=crop&w=400&q=80"
+            imageUrl={premiumBouquetImg}
           />
           <ProductCard 
             title="프리미엄 호접란 & 제철 과일바구니"
@@ -759,7 +761,7 @@ function B2CHome({ onOpenAi }) {
             price="180,000"
             rating="5.0"
             tags={['#상견례', '#격식있는']}
-            imageUrl="https://images.unsplash.com/photo-1563241527-3004b77bd3bf?auto=format&fit=crop&w=400&q=80"
+            imageUrl={orchidFruitImg}
           />
         </div>
       </div>
